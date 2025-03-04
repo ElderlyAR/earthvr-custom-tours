@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.filepond--panel-root {
+    @apply bg-gray-100 border-gray-300;
+}
+
+.filepond--drop-label {
+    @apply text-gray-500;
+}
+
+.filepond--label-action {
+    @apply text-indigo-600 hover:text-indigo-500;
+}
+
+.filepond--file-action-button {
+    @apply bg-indigo-600 hover:bg-indigo-700;
+}
+
+.filepond--file {
+    @apply bg-white;
+}
+
+.filepond--file-info {
+    @apply text-gray-900;
+}
+
+.filepond--file-status {
+    @apply text-gray-500;
+}
+
+.filepond--item-panel {
+    @apply bg-indigo-500;
+}
+
+.filepond--drip-blob {
+    @apply bg-indigo-500;
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles */
+*:focus-visible {
+    @apply outline-none ring-2 ring-indigo-500 ring-offset-2;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .filepond--item {
+        width: calc(100% - 0.5em);
+    }
+}
